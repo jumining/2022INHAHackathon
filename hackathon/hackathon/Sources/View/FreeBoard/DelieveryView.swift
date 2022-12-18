@@ -25,8 +25,9 @@ struct DelieveryView: View {
       Color(hex: "#151719").ignoresSafeArea()
       VStack(alignment: .leading, spacing: 0){
         Spacer().frame(height: 30)
-        ForEach(0..<2) { postit in
-          Postit().padding(.leading, 35)
+        Group{
+          Postit(title: "물 공구해요!!!", content: "물 같이 주문하실 분 구합니다", category: "같이 택배").padding(.leading, 35)
+          Postit(title: "쌀 공구합니당", content: "쌀 같이 주문하실 분 구합니다. 연락주세요ㅎㅎ", category: "같이 택배").padding(.leading, 35)
           
         }
         .padding(.trailing, 15)
@@ -62,8 +63,8 @@ struct DelieveryView: View {
             
             VStack(spacing: 0){
               Text("글쓰기")
-                 .font(.custom("NotoSansKR-Bold", size: 15))
-                 .foregroundColor(Color.black)
+                .font(.custom("NotoSansKR-Bold", size: 15))
+                .foregroundColor(Color.black)
               TextField("링크", text: $title)
                 .foregroundColor(.black)
                 .background(Color.white)
@@ -131,7 +132,7 @@ struct DelieveryView: View {
 }
 
 struct DelieveryView_Previews: PreviewProvider {
-    static var previews: some View {
-        DelieveryView()
-    }
+  static var previews: some View {
+    DelieveryView()
+  }
 }

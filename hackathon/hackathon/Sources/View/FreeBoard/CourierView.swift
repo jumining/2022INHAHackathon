@@ -26,9 +26,9 @@ struct CourierView: View {
       Color(hex: "#151719").ignoresSafeArea()
       VStack(alignment: .leading, spacing: 0){
         Spacer().frame(height: 30)
-        ForEach(0..<2) { postit in
-          Postit().padding(.leading, 35)
-          
+        Group{
+        Postit(title: "커피 같이 주문", content: "최소 금액 너무 큰데 같이 배달 주문하실 분 구해요", category: "같이 배달").padding(.leading, 35)
+        Postit(title: "엽떡 주문", content: "같이 배달 주문하실 분 구합니다", category: "같이 배달").padding(.leading, 35)
         }
         .padding(.trailing, 15)
         .padding(.bottom, 10)

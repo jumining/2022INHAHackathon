@@ -18,7 +18,7 @@ enum Tab{
 struct ContentView: View {
   
   @State private var selection: Tab = .freeBoard
-  
+  @StateObject private var sharevm = ShareManager()
   init() {
     UITabBar.appearance().backgroundColor = UIColor.black
     UITabBar.appearance().unselectedItemTintColor = UIColor.darkGray
@@ -42,6 +42,7 @@ struct ContentView: View {
       
       
       FreeBoardView()
+        .environmentObject(sharevm)
         .tabItem {
           Image(systemName: "list.triangle")
           Text("전체게시판")

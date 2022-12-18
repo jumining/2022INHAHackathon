@@ -24,7 +24,7 @@ struct LetterView: View {
             .padding(.leading, 20)
           Spacer()
         }
-        ForEach(0..<3) { i in
+        ForEach(0..<1) { i in
           OneLetterView()
             .padding(.bottom, 20)
         }.padding(.leading, 20)

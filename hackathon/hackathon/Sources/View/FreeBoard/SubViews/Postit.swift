@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct Postit: View {
-  var title = "군고구마 나눔합니다!"
-  var content = "안녕하세요. 407호입니다. 군고구마 한 박스를 집에서 들고와서 나눔 합니당 가져가실분들 연락주세요! :)"
-  var category = "나눔해요"
+  @State var title = ""
+  @State var content = ""
+  @State var category = ""
   
   var body: some View {
     ZStack(){
@@ -30,15 +30,9 @@ struct Postit: View {
         
         .foregroundColor(.white)
         .font(.custom("NotoSansKR-Regular", size: 12))
-      Spacer()
+        Spacer()
       }
     }
     .frame(width: UIScreen.main.bounds.size.width-15, height: 80, alignment: .center)
-  }
-}
-
-struct Postit_Previews: PreviewProvider {
-  static var previews: some View {
-    Postit()
   }
 }
