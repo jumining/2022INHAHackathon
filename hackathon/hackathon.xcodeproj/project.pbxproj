@@ -25,6 +25,7 @@
 		6FADB790294F60A000389DCE /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6FADB78D294F60A000389DCE /* NotoSansKR-Bold.otf */; };
 		6FADB791294F60A000389DCE /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6FADB78E294F60A000389DCE /* NotoSansKR-Medium.otf */; };
 		6FADB794294F683900389DCE /* Postit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FADB793294F683900389DCE /* Postit.swift */; };
+		6FADB79B294F9C0200389DCE /* OneLetterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FADB79A294F9C0200389DCE /* OneLetterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		6FADB78E294F60A000389DCE /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
 		6FADB792294F611C00389DCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6FADB793294F683900389DCE /* Postit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postit.swift; sourceTree = "<group>"; };
+		6FADB79A294F9C0200389DCE /* OneLetterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLetterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				6F01F9C0294F439E00E143B3 /* LetterView.swift */,
+				6FADB79A294F9C0200389DCE /* OneLetterView.swift */,
 			);
 			path = Letter;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				6FADB794294F683900389DCE /* Postit.swift in Sources */,
 				6F01F9BF294F439000E143B3 /* FreeBoardView.swift in Sources */,
 				6F01F9CD294F4BC000E143B3 /* BotResponse.swift in Sources */,
+				6FADB79B294F9C0200389DCE /* OneLetterView.swift in Sources */,
 				6F01F9C6294F43C200E143B3 /* BuildingView.swift in Sources */,
 				6F9A25D5294F38700075A92C /* ContentView.swift in Sources */,
 				6F01F9C8294F43CC00E143B3 /* UserView.swift in Sources */,

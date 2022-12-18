@@ -12,7 +12,8 @@ struct ReportView: View {
   @State var messages: [String] = ["집주인에게 건의할 사항이 있나요?"]
   
   var body: some View {
-    ZStack{
+    ZStack {
+     
       Color(hex: "EBEBEB")
         .edgesIgnoringSafeArea(.bottom)
         .padding(.top,450)
