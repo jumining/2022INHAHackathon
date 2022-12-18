@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LetterView: View {
+  
     var body: some View {
       ZStack(){
         Color(hex: "#151719").ignoresSafeArea()

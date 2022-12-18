@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct BuildingView: View {
+  @State var showPopup: Bool = false
+  
   var body: some View {
     ZStack{
       Color(hex: "#151719").ignoresSafeArea()
@@ -22,12 +24,12 @@ struct BuildingView: View {
           Spacer()
         }
         HStack{
-        Text("인천광역시 미추홀구 인하로 100번길 10, 인하빌라")
-          .font(.custom("NotoSansKR-Bold", size: 15))
-          .foregroundColor(Color.white).opacity(0.6)
-          .padding(.leading, 20)
+          Text("인천광역시 미추홀구 인하로 100번길 10, 인하빌라")
+            .font(.custom("NotoSansKR-Bold", size: 15))
+            .foregroundColor(Color.white).opacity(0.6)
+            .padding(.leading, 20)
           Spacer()
-            
+          
         }
         Spacer()
         ZStack{
@@ -39,6 +41,11 @@ struct BuildingView: View {
               LazyHStack{
                 ForEach(0..<7) { i in
                   RoundedRectangle(cornerRadius: 16)
+                    .onTapGesture {
+                      withAnimation {
+                        self.showPopup.toggle()
+                      }
+                    }
                     .frame(width: 70, height: 50, alignment: .center)
                     .foregroundColor( i%3 == 0 ? Color(hex: "#9CA9B3") : Color.yellow)
                     .shadow(color: Color(hex: "48414D").opacity(0.1), radius: 4, x: 0, y: 0)
@@ -52,6 +59,11 @@ struct BuildingView: View {
               LazyHStack{
                 ForEach(0..<7) { i in
                   RoundedRectangle(cornerRadius: 16)
+                    .onTapGesture {
+                      withAnimation {
+                        self.showPopup.toggle()
+                      }
+                    }
                     .frame(width: 70, height: 50, alignment: .center)
                     .foregroundColor( i%4 != 0 ? Color(hex: "#9CA9B3") : Color.yellow)
                     .shadow(color: Color(hex: "48414D").opacity(0.1), radius: 4, x: 0, y: 0)
@@ -65,6 +77,11 @@ struct BuildingView: View {
               LazyHStack{
                 ForEach(0..<7) { i in
                   RoundedRectangle(cornerRadius: 16)
+                    .onTapGesture {
+                      withAnimation {
+                        self.showPopup.toggle()
+                      }
+                    }
                     .frame(width: 70, height: 50, alignment: .center)
                     .foregroundColor( i%4 == 1 ? Color(hex: "#9CA9B3") : Color.yellow)
                     .shadow(color: Color(hex: "48414D").opacity(0.1), radius: 4, x: 0, y: 0)
@@ -80,10 +97,38 @@ struct BuildingView: View {
         }
         Spacer()
       }
+      
+      if self.showPopup {
+        GeometryReader{_ in
+          
+          ZStack{
+            Image("bg_postletter")
+            VStack{
+              TextEditor(text: .constant("쪽지 내용을 입력하세요."))
+                .background(Color.gray).opacity(0.2)
+                .foregroundColor(Color.black)
+                .frame(width: 300, height: 230, alignment: .center)
+                .padding(.bottom, 20)
+                .padding(.top, 40)
+              
+              Button(action: {
+                withAnimation {
+                  self.showPopup.toggle()
+                }
+              }) {
+                Image("icon_postLetter")
+                  .renderingMode(.original)
+                
+              }
+            }
+          }.padding()
+            .frame(width: UIScreen.main.bounds.width+20, height: UIScreen.main.bounds.height)
+            .background(Color.black.opacity(0.5).edgesIgnoringSafeArea(.all))
+        }
+      }
     }
   }
 }
-
 struct BuildingView_Previews: PreviewProvider {
   static var previews: some View {
     BuildingView()
