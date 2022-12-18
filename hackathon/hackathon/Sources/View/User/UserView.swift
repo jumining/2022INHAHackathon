@@ -39,7 +39,7 @@ struct UserView: View {
         }
         
         HStack{
-          Text("301호 님")
+          Text("302호 님")
             .font(.custom("NotoSansKR-Bold", size: 25))
             .foregroundColor(Color.white)
             .padding(.top, 10)
@@ -76,7 +76,7 @@ struct UserView: View {
             .overlay(
               VStack{Image("icon_certificate").resizable()
                   .frame(width: 50, height: 50, alignment: .center)
-                Text("집문서 인증")
+                Text("집주인 인증")
                   .font(.custom("NotoSansKR-Bold", size: 15))
                   .padding(.top, 10)
                 Text("인증 갱신 필요 O")

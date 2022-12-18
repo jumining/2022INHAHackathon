@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct BuildingView: View {
+  @State var text: String = ""
   @State var showPopup: Bool = false
   
   var body: some View {
@@ -100,17 +101,22 @@ struct BuildingView: View {
       
       if self.showPopup {
         GeometryReader{_ in
-          
           ZStack{
             Image("bg_postletter")
             VStack{
-              TextEditor(text: .constant("쪽지 내용을 입력하세요."))
-                .background(Color.gray).opacity(0.2)
+              TextEditor(text: $text)
                 .foregroundColor(Color.black)
                 .frame(width: 300, height: 230, alignment: .center)
                 .padding(.bottom, 20)
                 .padding(.top, 40)
-              
+                .padding(.leading, 15)
+                .padding(.trailing, 15)
+                .overlay(
+                  RoundedRectangle(cornerRadius: 16)
+                    .stroke(Color(hex: "#5658DD"), lineWidth: 1)
+                    .padding(.top, 40)
+                    .padding(.bottom, 20)
+                )
               Button(action: {
                 withAnimation {
                   self.showPopup.toggle()
@@ -118,12 +124,12 @@ struct BuildingView: View {
               }) {
                 Image("icon_postLetter")
                   .renderingMode(.original)
-                
               }
             }
-          }.padding()
-            .frame(width: UIScreen.main.bounds.width+20, height: UIScreen.main.bounds.height)
-            .background(Color.black.opacity(0.5).edgesIgnoringSafeArea(.all))
+          }
+          .padding()
+          .frame(width: UIScreen.main.bounds.width+20, height: UIScreen.main.bounds.height)
+          .background(Color.black.opacity(0.5).edgesIgnoringSafeArea(.all))
         }
       }
     }
