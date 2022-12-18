@@ -17,7 +17,7 @@ struct FreeBoardView: View {
     NavigationView{
     ZStack{
       Color(hex: "#151719").ignoresSafeArea()
-      ScrollView{
+      ScrollView(.vertical, showsIndicators: false){
         LazyVStack(spacing: 0){
           HStack{
             Text("전체 게시판")

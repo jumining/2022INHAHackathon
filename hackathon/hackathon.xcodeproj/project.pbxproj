@@ -166,9 +166,9 @@
 				6F9A25D4294F38700075A92C /* ContentView.swift */,
 				6F292DAC294F56AC003C4D28 /* FreeBoard */,
 				6F01F9CB294F4B9300E143B3 /* Report */,
-				6F01F9C0294F439E00E143B3 /* LetterView.swift */,
-				6F01F9C5294F43C200E143B3 /* BuildingView.swift */,
-				6F01F9C7294F43CC00E143B3 /* UserView.swift */,
+				6FADB795294F791300389DCE /* Letter */,
+				6FADB796294F7C0900389DCE /* Building */,
+				6FADB797294F869300389DCE /* User */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -197,6 +197,30 @@
 				6FADB78C294F60A000389DCE /* NotoSansKR-Regular.otf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		6FADB795294F791300389DCE /* Letter */ = {
+			isa = PBXGroup;
+			children = (
+				6F01F9C0294F439E00E143B3 /* LetterView.swift */,
+			);
+			path = Letter;
+			sourceTree = "<group>";
+		};
+		6FADB796294F7C0900389DCE /* Building */ = {
+			isa = PBXGroup;
+			children = (
+				6F01F9C5294F43C200E143B3 /* BuildingView.swift */,
+			);
+			path = Building;
+			sourceTree = "<group>";
+		};
+		6FADB797294F869300389DCE /* User */ = {
+			isa = PBXGroup;
+			children = (
+				6F01F9C7294F43CC00E143B3 /* UserView.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

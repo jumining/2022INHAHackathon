@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Postit: View {
   var title = "군고구마 나눔합니다!"
-  var content = "안녕하세요. 407호입니다. 군고구마 한 박스를 집에서 들고와서 나눔하려고 합니당"
+  var content = "안녕하세요. 407호입니다. 군고구마 한 박스를 집에서 들고와서 나눔 합니당 가져가실분들 연락주세요! :)"
   var category = "나눔해요"
   
   var body: some View {
@@ -21,6 +21,7 @@ struct Postit: View {
             .font(.custom("NotoSansKR-Bold", size: 16))
           Text(content)
             .foregroundColor(.white).opacity(0.9)
+            .allowsTightening(false)
             .lineLimit(2)
             .multilineTextAlignment(.leading)
           Text(category)

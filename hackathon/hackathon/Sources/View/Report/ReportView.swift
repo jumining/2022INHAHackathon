@@ -103,7 +103,6 @@ struct ReportView: View {
       withAnimation {
         if message != "" {
           messages.append("집주인에게 건의사항을 발신했습니다!")
-          messages.append("집주인에게 건의할 사항이 있나요?")
         }
       }
     }
