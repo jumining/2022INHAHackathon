@@ -1,13 +1,13 @@
 //
-//  DelieveryView.swift
+//  CourierView.swift
 //  hackathon
 //
-//  Created by 임주민 on 2022/12/18.
+//  Created by 임주민 on 2022/12/19.
 //
 
 import SwiftUI
 
-struct DelieveryView: View {
+struct CourierView: View {
   @State var showPopup: Bool = false
   @State var title: String = ""
   @State var content: String = ""
@@ -20,6 +20,7 @@ struct DelieveryView: View {
     
     UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
   }
+  
   var body: some View {
     ZStack{
       Color(hex: "#151719").ignoresSafeArea()
@@ -34,7 +35,7 @@ struct DelieveryView: View {
         
         Spacer()
       }
-      .navigationBarTitle("같이 배달")
+      .navigationBarTitle("같이 택배")
       .navigationBarTitleDisplayMode(.inline)
       
       VStack{
@@ -53,6 +54,7 @@ struct DelieveryView: View {
           }
         }
       }
+      
       if self.showPopup {
         GeometryReader{_ in
           ZStack{
@@ -126,12 +128,11 @@ struct DelieveryView: View {
       }
     }.foregroundColor(Color.white)
       .font(.custom("NotoSansKR-Bold", size: 13))
-    
   }
 }
 
-struct DelieveryView_Previews: PreviewProvider {
+struct CourierView_Previews: PreviewProvider {
     static var previews: some View {
-        DelieveryView()
+        CourierView()
     }
 }

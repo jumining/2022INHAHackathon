@@ -33,13 +33,13 @@ struct ContentView: View {
         }
         .tag(Tab.report)
       
-      
-      LetterView()
+      BuildingView()
         .tabItem {
-          Image(systemName: "quote.bubble.fill")
-          Text("쪽지함")
+          Image(systemName: "house.fill")
+          Text("세대 정보")
         }
-        .tag(Tab.letter)
+        .tag(Tab.building)
+      
       
       FreeBoardView()
         .tabItem {
@@ -48,13 +48,15 @@ struct ContentView: View {
         }
         .tag(Tab.freeBoard)
       
-      BuildingView()
-        .tabItem {
-          Image(systemName: "house.fill")
-          Text("세대 정보")
-        }
-        .tag(Tab.building)
       
+      LetterView()
+        .tabItem {
+          Image(systemName: "quote.bubble.fill")
+          Text("쪽지함")
+        }
+        .tag(Tab.letter)
+      
+     
       UserView()
         .tabItem {
           Image(systemName: "person")

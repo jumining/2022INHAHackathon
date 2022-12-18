@@ -9,12 +9,12 @@ import SwiftUI
 
 struct ReportView: View {
   @State private var messageText = ""
-  @State var messages: [String] = ["집주인에게 건의할 사항이 있나요?"]
+  @State var messages: [String] = ["집주인에게 건의할 사항이 있나요? \n건의할 사항을 보내주세요!"]
   
   var body: some View {
     ZStack {
-     
-      Color(hex: "EBEBEB")
+    
+      Color(.black)
         .edgesIgnoringSafeArea(.bottom)
         .padding(.top,450)
       
@@ -29,7 +29,7 @@ struct ReportView: View {
                 Text(newMessage)
                   .padding()
                   .foregroundColor(.white)
-                  .background(Color(hex: "C691F6"))
+                  .background(Color(hex: "#5658DD"))
                   .cornerRadius(16)
                   .padding(.horizontal, 16)
                   .padding(.bottom, 10)
@@ -53,7 +53,7 @@ struct ReportView: View {
             }
           }.rotationEffect(.degrees(180))
         }.rotationEffect(.degrees(180))
-          .background(Color.white)
+          .background(Color(hex: "#151719").ignoresSafeArea())
           .frame(height: 620)
         
         ZStack {

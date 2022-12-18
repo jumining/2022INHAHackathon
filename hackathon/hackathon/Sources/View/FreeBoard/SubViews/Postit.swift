@@ -32,9 +32,8 @@ struct Postit: View {
         .font(.custom("NotoSansKR-Regular", size: 12))
       Spacer()
       }
-      
     }
-    .frame(width: UIScreen.main.bounds.size.width, height: 80, alignment: .center)
+    .frame(width: UIScreen.main.bounds.size.width-15, height: 80, alignment: .center)
   }
 }
 

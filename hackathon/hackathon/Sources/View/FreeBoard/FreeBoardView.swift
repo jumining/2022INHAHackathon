@@ -53,6 +53,7 @@ struct FreeBoardView: View {
                 Postit().padding(.leading, 35)
                 
               }
+              .padding(.trailing, 15)
               .padding(.bottom, 10)
             }
             .frame(width:380, height:260)
@@ -88,6 +89,7 @@ struct FreeBoardView: View {
                 Postit().padding(.leading, 35)
                 
               }
+              .padding(.trailing, 15)
               .padding(.bottom, 10)
             }
             .frame(width:380, height:260)
@@ -123,6 +125,7 @@ struct FreeBoardView: View {
                 Postit().padding(.leading, 35)
                 
               }
+              .padding(.trailing, 15)
               .padding(.bottom, 10)
             }
             .frame(width:380, height:260)
@@ -146,14 +149,20 @@ struct FreeBoardView: View {
                 .padding(.top, 15)
                 .padding(.bottom, 15)
               Spacer()
-              Text("더 보기      ")
-                .font(.custom("NotoSansKR-Bold", size: 13))
-                .foregroundColor(Color(hex: "#BBBBFA"))
+              NavigationLink(
+                destination: CourierView(),
+                label: {
+                  Text("더 보기     ")
+                    .font(.custom("NotoSansKR-Bold", size: 13))
+                    .foregroundColor(Color(hex: "#BBBBFA"))
+                    .padding(.trailing, 10)
+                })
             }
             ForEach(0..<2) { postit in
               Postit().padding(.leading, 35)
               
             }
+            .padding(.trailing, 15)
             .padding(.bottom, 10)
           }
           .frame(width:380, height:260)
